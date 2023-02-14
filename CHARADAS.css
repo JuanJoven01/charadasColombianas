@@ -1,3 +1,4 @@
+
 :root{
     --pink: #FF00C0;
     --light_blue: #00B8DB;
@@ -12,5 +13,13 @@
 }
 
 header {
-    
+}
+
+div section img {
+    height: 200px;
+    width: 200px;
+}
+div {
+    flex-direction: ;
+
 }
