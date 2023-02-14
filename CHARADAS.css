@@ -1,0 +1,16 @@
+:root{
+    --pink: #FF00C0;
+    --light_blue: #00B8DB;
+    --yellow: #F0E800;
+    --red: #DC1001;
+    --blue: #0555FC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    
+}
