@@ -5,12 +5,18 @@
     --yellow: #F0E800;
     --red: #DC1001;
     --blue: #0555FC;
+
+    --sm: 5em;
+    --md: 9em;
+    --bg: 14em;
+
 }
 
-@font-face {
-    font-family: colombian;
-    src: url(./IMG/zilap-zenu-font/ZilapZenuDecorate-OVnmA.otf);
-}
+/*@font-face {
+    font-family: Titulos;
+    src: url(./IMG/highvoltage_rough/HighVoltage\ Rough.ttf);
+}*/
+
 
 * {
     margin: 0;
@@ -23,26 +29,27 @@ header {
     flex-direction: column;
     align-items: center ;
     background-color: var(--yellow);
-    height: 100px;
 
-
+    
 }
 
 header h1 {
-    font-family: colombian;
     color: var(--blue);
-    font-size: 15em;
+    font-size: var(--bg);
     margin-bottom: 0;
     padding-bottom: 0;
+    font-family: sans-serif;
+
 }
 
 header h2 {
-    font-family: colombian;
+    
     color: var(--red);
     font-size: 5em;;
     justify-self: center;
     margin-top: 0;
     padding-top: 0;
+    font-family: sans-serif;
 }
 
 
