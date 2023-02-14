@@ -22,13 +22,15 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+    
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center ;
-    background-color: var(--yellow);
+
+    
 
     
 }
@@ -52,6 +54,10 @@ header h2 {
     font-family: sans-serif;
 }
 
+body {
+    background-image: url("./IMG/Background.png");
+    
+}
 main div { 
     display: grid;
     grid-template-columns: 1fr 1fr;
