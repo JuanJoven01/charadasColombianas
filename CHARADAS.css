@@ -45,12 +45,36 @@ header h2 {
     padding-top: 0;
 }
 
-
-div section img {
-    height: 160px;
-    width: 160px;
+main div { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
-div section h2 {
-    font-size: 16px;
+main div section {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    justify-items: center;
+    width: 180px;
+    height: 300px;
+}
+
+main div section img {
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    border-radius: 24px;
+} 
+
+main div section h2 {
+    font-size: 20px;
+    align-self: center;
+}
+
+main div section p {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-self: center;
+    
 }
