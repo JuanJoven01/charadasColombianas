@@ -7,13 +7,44 @@
     --blue: #0555FC;
 }
 
+@font-face {
+    font-family: colombian;
+    src: url(./IMG/zilap-zenu-font/ZilapZenuDecorate-OVnmA.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-size: 62.5%;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    background-color: var(--yellow);
+    height: 100px;
+
+
 }
+
+header h1 {
+    font-family: colombian;
+    color: var(--blue);
+    font-size: 15em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+header h2 {
+    font-family: colombian;
+    color: var(--red);
+    font-size: 5em;;
+    justify-self: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+
 
 div section img {
     height: 200px;
