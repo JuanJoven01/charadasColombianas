@@ -11,10 +11,10 @@ let infancia = document.getElementById("Infancia");
 infancia.addEventListener("click", finfancia);
 
 
-let frases = []
+let dichos = []
 
-let colombianadas = []
+let estereotipos = []
 
-let acentos = []
+let farandula = []
 
-let frases = []
+let infancia = []
