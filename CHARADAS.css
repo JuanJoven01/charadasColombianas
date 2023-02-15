@@ -82,16 +82,15 @@ main div section img {
 } 
 
 main div section h2 {
-    font-size: 20px;
+    font-size: 28px;
     align-self: center;
 }
 
 main div section p {
-    font-size: 12px;
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
     align-self: center;
-    
 }
 
 section {

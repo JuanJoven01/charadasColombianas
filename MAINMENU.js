@@ -1,26 +1,20 @@
-let frases = document.getElementById("frases");
-frases.addEventListener("click", ffrases);
-
-let colombianadas = document.getElementById("colombianadas");
-colombianadas.addEventListener("click", fcolombianadas);
-
-let acentos = document.getElementById("acentos");
-acentos.addEventListener("click", facentos);
-
-let palabras = document.getElementById("palabras");
-frases.addEventListener("click", fpalabras);
+let dichos = document.getElementById("dichos");
+dichos.addEventListener("click", fdichos);
 
 let estereotipos = document.getElementById("estereotipos");
 estereotipos.addEventListener("click", festereotipos);
 
-let famosos = document.getElementById("famosos");
-famosos.addEventListener("click", ffamosos);
+let farandula = document.getElementById("Farandula");
+farandula.addEventListener("click", ffarandula);
 
-let canciones = document.getElementById("canciones");
-canciones.addEventListener("click", fcanciones);
+let infancia = document.getElementById("Infancia");
+infancia.addEventListener("click", finfancia);
 
-let politicos = document.getElementById("politicos");
-politicos.addEventListener("click", fpoliticos);
 
-let Novelas_peliculas = document.getElementById("Novelas_peliculas");
-Novelas_peliculas.addEventListener("click", fNovelas_peliculas);
+let frases = []
+
+let colombianadas = []
+
+let acentos = []
+
+let frases = []
