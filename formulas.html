@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Definir los arrays de las tres variables
+        const RPM = [6200, 6200, 6700, 6800, 7100];
+        const ALTITUDE = [6000, 8000, 1000, 10000, 8000];
+        const KG = [17, 16, 23, 18, 21];
+
+        // Definir una función para encontrar los coeficientes de la regresión lineal
+        function regression(x, y, z) {
+          const n = x.length;
+          let xSum = 0, ySum = 0, zSum = 0, xySum = 0, xzSum = 0, yzSum = 0, x2Sum = 0, y2Sum = 0;
+
+          for (let i = 0; i < n; i++) {
+            xSum += x[i];
+            ySum += y[i];
+            zSum += z[i];
+            xySum += x[i] * y[i];
+            xzSum += x[i] * z[i];
+            yzSum += y[i] * z[i];
+            x2Sum += x[i] ** 2;
+            y2Sum += y[i] ** 2;
+          }
+
+          const detA = (n * x2Sum) - (xSum ** 2);
+          const detB = (n * xySum) - (xSum * ySum);
+          const detC = (n * xzSum) - (xSum * zSum);
+          const detD = (n * y2Sum) - (ySum ** 2);
+          const detE = (n * yzSum) - (ySum * zSum);
+
+          const a = ((detD * detC) - (detB * detE)) / ((detA * detD) - (detB ** 2));
+          const b = ((detA * detE) - (detB * detC)) / ((detA * detD) - (detB ** 2));
+          const c = (zSum - a * xSum - b * ySum) / n;
+
+          return [a, b, c];
+        }
+
+        // Definir una función para evaluar la fórmula de regresión lineal
+        function evalFormula(a, b, c) {
+          // Encontrar los coeficientes de la regresión lineal entre RPM y ALTITUDE que mejor se ajusten a los datos de KG
+          const [aCoeff, bCoeff, cCoeff] = regression(a, b, c);
+
+          // Aplicar la fórmula de la regresión lineal a cada índice de los arrays de RPM y ALTITUDE para obtener los valores de KG
+          const result = [];
+          for (let i = 0; i < a.length; i++) {
+            const kg = aCoeff * a[i]

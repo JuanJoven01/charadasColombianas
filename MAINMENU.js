@@ -1,3 +1,4 @@
+/*
 let dichos = document.getElementById("dichos");
 dichos.addEventListener("click", fdichos);
 
@@ -8,13 +9,43 @@ let farandula = document.getElementById("Farandula");
 farandula.addEventListener("click", ffarandula);
 
 let infancia = document.getElementById("Infancia");
-infancia.addEventListener("click", finfancia);
+infancia.addEventListener("click", finfancia); 
+*/
 
+// Constantes para tipo de charada
+const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
+const arrayEstereotipos = ['rolo', 'caleno', 'cucuteno', 'paisa'];
+const arrayFarandula = ['maluma', 'shakira', 'diomedes', 'juanes'];
+const arrayInfancia = ['ArtAttack', 'MandySenorbigotes', 'dalmatas', 'princesasapo'];
 
-let dichos = []
+// Funciones para el arrey 
+function seleccionarDichos(array) 
+{
+  const indiceAlAzar = Math.floor(Math.random() * array.length);
+  return array[indiceAlAzar];
+}
 
-let estereotipos = []
+function seleccionarEstereotipos(array) 
+{
+  const indiceAlAzar = Math.floor(Math.random() * array.length);
+  return array[indiceAlAzar];
+}
 
-let farandula = []
+function seleccionarFarandula(array) 
+{
+  const indiceAlAzar = Math.floor(Math.random() * array.length);
+  return array[indiceAlAzar];
+}
 
-let infancia = []
+function seleccionarInfancia(array) 
+{
+  const indiceAlAzar = Math.floor(Math.random() * array.length);
+  return array[indiceAlAzar];
+}
+
+// Console para ver funcion
+let adivinarDichos = seleccionarDichos(arrayDichos)+ ", " +
+seleccionarEstereotipos(arrayEstereotipos)+ ", " +
+seleccionarFarandula(arrayFarandula)+ ", " +
+seleccionarInfancia(arrayInfancia);
+console.log(adivinarDichos);
