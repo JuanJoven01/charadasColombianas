@@ -10,7 +10,12 @@ writeIncorrect.addEventListener("click", nextDicho);
 writeIncorrect.addEventListener("click", fcountIncorrect);
 writeIncorrect.addEventListener("click", fcountResult);
 
-let wordSelect = document.getElementById("modificable")
+let wordSelect = document.getElementById("modificable");
+
+let launch = document.getElementById("iniciar");
+launch.addEventListener("click", TimerCount);
+launch.addEventListener("click", nextDicho);
+
 
 let getCountCorrect = document.getElementById("corr");
 
@@ -26,7 +31,7 @@ let countIncorrect = 0;
 
 let countResult;
 
-let seconds = 10;
+let seconds = 3;
 
 // Constantes para tipo de charada
 const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
@@ -77,7 +82,7 @@ function fcountResult()
   }
   getCountResult.innerHTML = countResult;
 }
-
+function TimerCount(){
 let temporizador = 
 setInterval
 (
@@ -89,9 +94,9 @@ setInterval
   if (seconds === 0) 
     {
     clearInterval(temporizador);
+
     console.log("Tiempo finalizado");
     }
   }, 1000
 );
-
-
+}
