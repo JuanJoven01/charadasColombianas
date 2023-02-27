@@ -19,16 +19,16 @@ function fdichos(event)
 
 function festereotipos(event) 
 {
-  location.href = "/ESTEREOTIPOS.HTML"
+  location.href = "/DICHOS.HTML"
 }
 
 function ffarandula(event) 
 {
-  location.href = "/FARANDULA.HTML"
+  location.href = "/DICHOS.HTMLL"
 }
 
 function finfancia(event) 
 {
-  location.href = "/INFANCIA.HTML"
+  location.href = "/DICHOS.HTML"
 }
 
