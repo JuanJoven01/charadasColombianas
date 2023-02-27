@@ -16,7 +16,6 @@ let launch = document.getElementById("iniciar");
 launch.addEventListener("click", TimerCount);
 launch.addEventListener("click", nextDicho);
 
-
 let getCountCorrect = document.getElementById("corr");
 
 let getCountIncorrect = document.getElementById("inco");
@@ -82,21 +81,22 @@ function fcountResult()
   }
   getCountResult.innerHTML = countResult;
 }
-function TimerCount(){
-let temporizador = 
-setInterval
-(
-  function timer() 
-  {
-  seconds--;
-  getCountTime.innerHTML = seconds;
-  console.log(seconds);
-  if (seconds === 0) 
+
+// funcion de contador
+function TimerCount()
+{
+  let temporizador = setInterval
+  (
+    function timer() 
+    {
+    seconds--;
+    getCountTime.innerHTML = seconds;
+    console.log(seconds);
+    if (seconds === 0) 
     {
     clearInterval(temporizador);
-
     console.log("Tiempo finalizado");
     }
-  }, 1000
-);
+    }, 1000
+  );
 }
