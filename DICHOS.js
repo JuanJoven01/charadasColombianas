@@ -82,7 +82,7 @@ function nextDicho(event)
 }
 
   // function launcher
-function launcher(seconds) 
+function launcher()
 {
   writeCorrect.addEventListener("click", nextDicho);
   writeCorrect.addEventListener("click", fcountCorrect);
