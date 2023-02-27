@@ -11,7 +11,7 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 60;
+let playTime = 5;
 let launch = document.getElementById("iniciar");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
@@ -55,10 +55,10 @@ function playcount()
     {
     playTime--;
     getTimeCount.innerHTML = playTime;
-    if (playTime == 0) 
-    {
-    clearInterval(temporizador);
-    }
+      if (playTime == 0) 
+      {
+      clearInterval(temporizador);
+      }
     }, 1000
   );
 }
@@ -66,19 +66,19 @@ function playcount()
 // Funciones para el arrey 
 function seleccionarDichos(array) 
 {
-    const azarIndex = Math.floor(Math.random() * array.length);
-    return array[azarIndex];   
+  const azarIndex = Math.floor(Math.random() * array.length);
+  return array[azarIndex];   
 }
 
 // Funciones para event
 function nextDicho(event) 
 {
   if (event = true)
-      {
-        seleccionarDichos(arrayDichos)
-        let words = seleccionarDichos(arrayDichos)
-        wordSelect.innerHTML = words
-      }     
+  {
+    seleccionarDichos(arrayDichos)
+    let words = seleccionarDichos(arrayDichos)
+    wordSelect.innerHTML = words
+  }     
 }
 
   // function launcher
@@ -127,9 +127,9 @@ const waitexcecute = () =>
   }
   else
   {  
-    playcount();
-    launcher();
-    nextDicho();  
+  playcount();
+  launcher();
+  nextDicho();  
   }
 
 }
