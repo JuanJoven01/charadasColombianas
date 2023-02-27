@@ -18,11 +18,15 @@ let getCountIncorrect = document.getElementById("inco");
 
 let getCountResult = document.getElementById("resultado");
 
+let getCountTime = document.getElementById("temporizador");
+
 let countCorrect = 0;
 
 let countIncorrect = 0;
 
 let countResult;
+
+let seconds = 10;
 
 // Constantes para tipo de charada
 const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
@@ -40,7 +44,7 @@ function seleccionarDichos(array)
 // Funciones para event
 function nextDicho(event) 
 {
-  if (event.click = true)
+  if (event = true)
       {
         seleccionarDichos(arrayDichos)
         let y = seleccionarDichos(arrayDichos)
@@ -72,6 +76,22 @@ function fcountResult()
     countResult = 0
   }
   getCountResult.innerHTML = countResult;
-
 }
+
+let temporizador = 
+setInterval
+(
+  function timer() 
+  {
+  seconds--;
+  getCountTime.innerHTML = seconds;
+  console.log(seconds);
+  if (seconds === 0) 
+    {
+    clearInterval(temporizador);
+    console.log("Tiempo finalizado");
+    }
+  }, 1000
+);
+
 
