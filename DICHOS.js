@@ -11,8 +11,8 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 5;
-let launch = document.getElementById("iniciar");
+let playTime = 60;
+let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 
@@ -34,7 +34,7 @@ function TimerCount()
     function timer() 
     {
     seconds--;
-    getCountTime.innerHTML = seconds;
+    getCountTime.innerHTML = 'Tiempo para inciar: ' + seconds;
     if (seconds == 0) 
     {
     clearInterval(temporizador);
@@ -54,7 +54,7 @@ function playcount()
     function timer() 
     {
     playTime--;
-    getTimeCount.innerHTML = playTime;
+    getTimeCount.innerHTML = 'Tiempo de ronda: ' + playTime;
       if (playTime == 0) 
       {
       clearInterval(temporizador);
@@ -96,13 +96,13 @@ function launcher()
 function fcountCorrect() 
   {
     sumaContador = countCorrect++;  
-    getCountCorrect.innerHTML = sumaContador + 1;
+    getCountCorrect.innerHTML = 'Correctas: ' +(sumaContador + 1) ;
   }
   
   function fcountIncorrect() 
   {
     restaContador = countIncorrect++;  
-    getCountIncorrect.innerHTML = restaContador + 1;
+    getCountIncorrect.innerHTML = 'Incorrectas: ' + (restaContador + 1) ;
   }
   
   function fcountResult()
@@ -114,7 +114,7 @@ function fcountCorrect()
     {
       countResult = 0
     }
-    getCountResult.innerHTML = countResult;
+    getCountResult.innerHTML = 'Puntos ronda: ' + countResult;
   }
 }
 

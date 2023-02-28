@@ -5,22 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/DICHOS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
 </head>
 <body>
-    <h1>DICHOS</h1>
-    <main>
-        <section>
-            <button id="iniciar">INICIAR</button>
-            <p id="modificable">ADIVINA LA PALABRA</p>         
-            <button id="correcto">CORRECTO</button>
-            <BUtton id="incorrecto">PASO</BUtton> <br>
-            <output id="corr">0</output>
-            <output id="inco">0</output>
-            <output id="resultado">0</output>
-            <output id="temporizador">0</output>
-            <output id="tiempojuego">0</output>
-        </section>
+    <header>
+        <div>
+            <h1>DICHOS</h1>
+        </div>
+        <div>
+            <section class="">
+                <output id="temporizador">Tiempo para inciar: 5</output>
+                <output id="tiempojuego">Tiempo de ronda: 60</output>
+            </section>
+        </div>
+    </header>
+
+    <main>  
+        <div>
+            <section>
+                <strong>
+                    <output id="modificable">Adivina el dicho</output>
+                </strong>
+            </section>
+ 
+            <section>
+                <button id="incorrecto">PASO</button>
+                <button id="correcto">CORRECTO</button>
+            </section>       
+        </div>
     </main>
+
+    <footer>
+        <div>
+            <section class="">
+                <output id="corr">Correctas: 0</output> <br>
+                <output id="inco">Incorrectas: 0</output> <br>
+                <strong>
+                    <output id="resultado">Puntos ronda: 0</output> <br>
+                </strong>
+
+            </section>
+        </div>
+    </footer>
     <script src="/DICHOS.js"></script>
 </body>
 </html>

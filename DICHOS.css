@@ -1,0 +1,17 @@
+:root{
+    --pink: #FF00C0;
+    --light_blue: #00B8DB;
+    --yellow: #F0E800;
+    --red: #DC1001;
+    --blue: #0555FC;
+
+    --sm: 2.5em;
+    --md: 5em;
+    --bg: 10em;
+}
+
+html {
+    font-size: 62.5%;
+    min-width: 370px;
+}
+
