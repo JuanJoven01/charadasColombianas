@@ -5,8 +5,8 @@
     --red: #DC1001;
     --blue: #0555FC;
 
-    --sm: 1em;
-    --md: 2em;
+    --sm: 2em;
+    --md: 3em;
     --bg: 4em;
 }
   
@@ -23,7 +23,7 @@ html {
 
 .next 
 { 
-    width: 600px;
+    width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -32,7 +32,7 @@ html {
 
 .temp
 {
-    width: 600px;
+    width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -42,13 +42,17 @@ html {
 
 .modify 
 {
+    align-items: center;
+    text-align: center;
+    display: flex;
     font-size: var(--bg);
     padding: 10px;
+    height: 100px;
 }
 
 .result
 {
-    width: 600px;
+    width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
