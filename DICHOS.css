@@ -13,22 +13,32 @@
 html {
     font-size: 62.5%;
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+body 
+{
+    transform: rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+body div 
+{
+    padding: 32px;
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-body 
-{
-   transform: rotate(90deg);
-   display: grid;
-   align-items: center;
-   justify-items: center;
-}
-
 section
 {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
