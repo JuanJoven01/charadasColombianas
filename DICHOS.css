@@ -9,9 +9,26 @@
     --md: 5em;
     --bg: 10em;
 }
-
+  
 html {
     font-size: 62.5%;
-    min-width: 370px;
+    height: 600px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
+body 
+{
+   transform: rotate(90deg);
+   display: grid;
+   align-items: center;
+   justify-items: center;
+}
+
+section
+{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
