@@ -19,6 +19,7 @@ html {
 {
     font-size: var(--md);
     margin: 0;
+    color: var(--yellow);
 }
 
 .next 
@@ -30,6 +31,20 @@ html {
     padding: 10px;
 }
 
+.button
+
+{
+    width: 160px;
+    color: var(--pink);
+    font-size: var(--sm);
+    padding: 6px;
+    background-color: transparent;
+    border-color: var(--pink);
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+
 .temp
 {
     width: 800px;
@@ -38,6 +53,7 @@ html {
     justify-items: center;
     padding: 20px;
     font-size: var(--sm);
+    color: var(--light_blue);
 }
 
 .modify 
@@ -48,6 +64,7 @@ html {
     font-size: var(--bg);
     padding: 10px;
     height: 100px;
+    color: var(--red);
 }
 
 .result
@@ -58,6 +75,7 @@ html {
     justify-items: center;
     padding: 20px;
     font-size: var(--sm);
+    color: #0555FC;
 }
 
 body 
