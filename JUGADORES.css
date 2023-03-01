@@ -1,0 +1,71 @@
+
+:root{
+--pink: #FF00C0;
+--light_blue: #00B8DB;
+--yellow: #F0E800;
+--red: #DC1001;
+--blue: #0555FC;
+
+--sm: 2em;
+--md: 3em;
+--bg: 4em;
+}
+
+html {
+font-size: 62.5%;
+height: 800px;
+}
+
+header h1 {
+color: var(--yellow);
+font-size: var(--bg);
+text-align: center;
+text-justify: center;
+}
+
+main { 
+display: flex;
+flex-direction: row;
+padding: 5px;
+height: 460px;
+justify-content: space-around;
+}
+
+main button {
+background-color: transparent;
+border-color: var(--light_blue);
+padding: 4px;
+font-size: var(--sm);
+border-radius: 40px;
+border-width: 1px;
+direction: initial;
+}
+
+main section {
+width: 300px;
+display: flex;
+flex-direction: column;
+}
+
+main section div input{
+width: 300px;
+font-size: var(--md);
+margin: 10px 0px 10px 0px;
+border-width: 1px;
+border-color: var(--blue);
+}
+
+footer { 
+display: grid;
+justify-content: center; 
+padding-top: 16px;
+}
+
+footer button{
+width: 200px;
+height: 40px;
+border-radius: 100px;
+background-color: transparent;
+border-width: 1px;
+border-color: var(--red);
+}
