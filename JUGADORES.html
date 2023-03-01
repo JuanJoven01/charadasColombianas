@@ -101,11 +101,23 @@ footer button{
     </main>
 
     <footer>
-        <button>Jugar</button>
+        <button id="mainmenu">Jugar</button>
     </footer>
 
 
     <script>
+      let dichos = document.getElementById("mainmenu");
+      dichos.addEventListener("click", fmainMenu);
+
+      // Funciones para redirigir
+      function fmainMenu(event) 
+      {
+        location.href = '/MAINMENU.html'
+      }
+
+
+
+
       function addInput() {
         var inputContainer = document.getElementById("inputContainer");
         var newInput = document.createElement("input");

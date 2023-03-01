@@ -1,0 +1,106 @@
+
+:root{
+    --pink: #FF00C0;
+    --light_blue: #00B8DB;
+    --yellow: #F0E800;
+    --red: #DC1001;
+    --blue: #0555FC;
+
+    --sm: 1.5em;
+    --md: 2em;
+    --bg: 3em;
+
+}
+
+/*@font-face {
+    font-family: Titulos;
+    src: url(./IMG/highvoltage_rough/HighVoltage\ Rough.ttf);
+}*/
+
+html {
+
+    font-size: 62.5%;
+    min-width: 370px;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    margin-bottom: 1em;
+    background-color: #fbff0041;
+}
+
+header h1 {
+    color: var(--blue);
+    font-size: 6em;
+    margin: 0 auto 0;
+    font-family: sans-serif;
+
+}
+
+header h2 {
+    
+    color: var(--red);
+    font-size: 2em;;
+    justify-self: center;
+    margin: 0 auto 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url("./IMG/Background.png");
+    
+}
+main div { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+main div section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 320px;
+
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(240,232,0,1);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(240,232,0,1);
+    box-shadow: 0px 0px 15px 1px rgba(240,232,0,1);
+    margin: 1.3em;
+    border-radius: 1.2em;
+
+}
+
+main div section:hover {
+    -webkit-box-shadow: 0px 0px 15px 7px rgba(240,232,0,1);
+    -moz-box-shadow: 0px 0px 15px 7px rgba(240,232,0,1);
+    box-shadow: 0px 0px 15px 7px rgba(240,232,0,1);
+    margin: .8em;
+    border-radius: 1.2em;
+    
+}
+
+main div section h2 {
+    font-size: var(--bg);
+    align-self: center;
+    margin: 7px;
+    color: var(--light_blue);
+}
+
+main div section img {
+    width: 150px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 8px;
+} 
+
+main div section p {
+    font-size: var(--sm);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--yellow);
+}
