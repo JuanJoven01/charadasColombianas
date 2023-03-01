@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+
+  </head>
+
+  <style>
+    :root{
+    --pink: #FF00C0;
+    --light_blue: #00B8DB;
+    --yellow: #F0E800;
+    --red: #DC1001;
+    --blue: #0555FC;
+
+    --sm: 2em;
+    --md: 3em;
+    --bg: 4em;
+}
+  
+html {
+    display: block;
+    font-size: 62.5%;
+    height: 800px;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: var(--bg);
+    text-align: center;
+    text-justify: center;
+}
+
+main { 
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    height: 460px;
+
+}
+
+main button {
+    background-color: transparent;
+    border-color: var(--light_blue);
+    padding: 4px;
+    font-size: var(--sm);
+    border-radius: 40px;
+    border-width: 1px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+div input{
+    width: 300px;
+    font-size: var(--md);
+    margin: 10px 0px 10px 0px;
+    border-width: 1px;
+    border-color: var(--blue);
+}
+
+footer { 
+    display: grid;
+    justify-content: center; 
+    padding-top: 16px;
+}
+
+footer button{
+    width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: var(--red);
+}
+  </style>
+
+  <body>
+    <header>
+        <h1>APODOS</h1>
+    </header>
+
+    <main>
+        <div id="inputContainer"><input type="text"></div>
+        <button id="addInputButton" onclick="addInput()">+</button>
+    </main>
+
+    <footer>
+        <button>Jugar</button>
+    </footer>
+
+
+    <script>
+      function addInput() {
+        var inputContainer = document.getElementById("inputContainer");
+        var newInput = document.createElement("input");
+        newInput.type = "text";
+        inputContainer.appendChild(newInput);
+      }
+    </script>
+
+  </body>
+</html>
