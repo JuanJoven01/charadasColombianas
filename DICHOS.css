@@ -13,17 +13,20 @@
 html {
     display: block;
     font-size: 62.5%;
+
 }
 
 body 
 {
     transform: rotate(90deg);
-    max-width: 400px;
-    min-height: 600px;
-    max-height: 700px;
+    min-width: 360px;
+    max-width: 420px;
+    min-height: 700px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
 }
 
 body div 
