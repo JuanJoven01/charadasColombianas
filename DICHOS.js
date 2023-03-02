@@ -11,7 +11,7 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 60;
+let playTime = 5;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
@@ -61,6 +61,12 @@ function playcount()
       }
     }, 1000
   );
+}
+
+// Funciones para redirigir
+function fresultados() 
+{
+  location.href = "/RESULTADOS.html"
 }
 
 // Funciones para el arrey 
@@ -118,6 +124,8 @@ function fcountCorrect()
   }
 }
 
+
+
 // Funcion waitexcecute
 const waitexcecute = () => 
 {
@@ -130,8 +138,24 @@ const waitexcecute = () =>
   playcount();
   launcher();
   nextDicho();  
+  waitResultados();
+  }
+
+}
+
+// Funcion waitexcecute
+const waitResultados = () => 
+{
+  if (playTime > 0) {
+    setTimeout(waitResultados, 1000); // espera 1 segundo y vuelve a comprobar
+    return;
+  }
+  else
+  {  
+    fresultados();
   }
 
 }
 waitexcecute();
+
 
