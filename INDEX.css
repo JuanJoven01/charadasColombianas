@@ -50,6 +50,7 @@ main button{
     color: var(--blue);
     border-width: 1px;
     border-color: var(--red);
+    border-radius: 20px;
 }
 
 footer {
