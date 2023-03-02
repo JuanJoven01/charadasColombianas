@@ -16,6 +16,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    width: 400px;
+}
+
 header {
     display: flex;
     flex-direction: column;

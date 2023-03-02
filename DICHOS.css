@@ -15,6 +15,24 @@ html {
     font-size: 62.5%;
 }
 
+body 
+{
+    transform: rotate(90deg);
+    max-width: 400px;
+    min-height: 600px;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body div 
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 .tittle
 {
     font-size: var(--md);
@@ -76,22 +94,6 @@ html {
     padding: 20px;
     font-size: var(--sm);
     color: #0555FC;
-}
-
-body 
-{
-    transform: rotate(90deg);
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-body div 
-{
-    display: grid;
-    justify-content: center;
-    align-content: center;
 }
 
 section
