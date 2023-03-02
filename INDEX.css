@@ -1,0 +1,64 @@
+:root{
+    --pink: #FF00C0;
+    --light_blue: #00B8DB;
+    --yellow: #F0E800;
+    --red: #DC1001;
+    --blue: #0555FC;
+
+    --an: 1em;
+    --sm: 2em;
+    --md: 3em;
+    --bg: 4em;
+}
+  
+html {
+    display: block;
+    font-size: 62.5%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header H1 {
+     font-size: var(--bg);
+     color: var(--yellow);
+}
+
+header p { 
+    font-size: var(--sm);
+    color: var(--light_blue);
+}
+
+main {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main button{
+    font-size: var(--bg);
+    background-color: transparent;
+    color: var(--blue);
+    border-width: 1px;
+    border-color: var(--red);
+}
+
+footer {
+    color: var(--pink);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer section h2 {
+    font-size: var(--sm);
+}
+
+footer section p {
+    font-size: var(--an);
+}
