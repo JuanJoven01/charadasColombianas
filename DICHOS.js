@@ -124,8 +124,6 @@ function fcountCorrect()
   }
 }
 
-
-
 // Funcion waitexcecute
 const waitexcecute = () => 
 {
