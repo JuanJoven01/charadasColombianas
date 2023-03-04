@@ -1,3 +1,4 @@
+
 // elementById para redirigir
 let dichos = document.getElementById("dichos");
 dichos.addEventListener("click", fdichos);

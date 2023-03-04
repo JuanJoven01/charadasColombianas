@@ -1,23 +1,22 @@
 
 let dichos = document.getElementById("mainmenu");
-dichos.addEventListener("click", (fplayers, fmainMenu));
+dichos.addEventListener("click", (fplayers));
 
 let jugador1 = document.getElementById('Player1')
 jugador1.value = 'jugador 1'
 
+let jugadoresButton = document.getElementById('addInputButton');
+jugadoresButton.addEventListener('click', numberOfPlayer)
+
 let numberPlayer = 1;
-
-
-
-
 // Funciones para redirigir
 
-
+/*
 function fmainMenu(event) 
 {
   location.href = '/MAINMENU.html'
 }
-
+*/
 
 function addInput() {
   let inputContainer = document.getElementById("inputContainer");
@@ -150,6 +149,6 @@ function forNumberPlayers()
 }
 
 function fplayers() {
-  forNumberPlayers();
+  forNumberPlayers()
 }
 

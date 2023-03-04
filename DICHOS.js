@@ -11,7 +11,7 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 60;
+let playTime = 5;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
