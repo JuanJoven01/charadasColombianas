@@ -1,3 +1,4 @@
+
 // Get element
 let wordSelect = document.getElementById("modificable");
 let getCountCorrect = document.getElementById("corr");
