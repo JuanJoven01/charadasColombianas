@@ -1,30 +1,29 @@
 
 let dichos = document.getElementById("mainmenu");
-dichos.addEventListener("click", fplayers);
+dichos.addEventListener("click", (fplayers));
+
+let jugador1 = document.getElementById('Player1')
+jugador1.value = 'jugador 1'
 
 let numberPlayer = 1;
 
-let player1; 
-let player2;
-let player3; 
-let player4; 
-let player5; 
-let player6;
-let player7;
-let player8;
+
+
 
 // Funciones para redirigir
 /*
+
 function fmainMenu(event) 
 {
-  location.href = '/RESULTADOS.html'
+  location.href = '/MAINMENU.html'
 }
-*/
-function addInput() {
+*/ 
 
+function addInput() {
   let inputContainer = document.getElementById("inputContainer");
   let newInput = document.createElement("input");
   newInput.type = "text";
+  newInput.value = 'Jugador ' + numberPlayer
   newInput.className = 'newPlayer';
   newInput.id = 'Player' + numberPlayer;
   inputContainer.appendChild(newInput);
@@ -39,8 +38,6 @@ function numberOfPlayer(event) {
   }
   }
 
-
-
 function forNumberPlayers() 
 {
   switch (numberPlayer) {
@@ -48,7 +45,7 @@ function forNumberPlayers()
       case 1: 
       function players1() {
         let player1 = document.getElementById("Player1").value;
-      
+    
         console.log(player1);
       }
       players1();
@@ -56,7 +53,7 @@ function forNumberPlayers()
 
       case 2:
         function players2() {
-          let player1 = document.getElementById("Player1").value;
+          let player1 = document.getElementById("Player1","Player2").value;
           let player2 = document.getElementById("Player2").value;
         
           console.log(player1, player2);
