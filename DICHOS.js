@@ -11,7 +11,7 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 5;
+let playTime = 60;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
@@ -90,7 +90,7 @@ function nextDicho(event)
   // function launcher
 function launcher()
 {
-  writeCorrect.addEventListener("click", nextDicho);
+  writeCorrect.addEventListener("click", (nextDicho));
   writeCorrect.addEventListener("click", fcountCorrect);
   writeCorrect.addEventListener("click", fcountResult);
   

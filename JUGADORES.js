@@ -1,6 +1,6 @@
 
 let dichos = document.getElementById("mainmenu");
-dichos.addEventListener("click", (fplayers));
+dichos.addEventListener("click", (fplayers, fmainMenu));
 
 let jugador1 = document.getElementById('Player1')
 jugador1.value = 'jugador 1'
@@ -11,13 +11,13 @@ let numberPlayer = 1;
 
 
 // Funciones para redirigir
-/*
+
 
 function fmainMenu(event) 
 {
   location.href = '/MAINMENU.html'
 }
-*/ 
+
 
 function addInput() {
   let inputContainer = document.getElementById("inputContainer");
