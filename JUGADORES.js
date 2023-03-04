@@ -45,31 +45,29 @@ function forNumberPlayers()
       function players1() {
         let player1 = document.getElementById("Player1").value;
     
-        console.log(player1);
+        return [player1];
       }
-      players1();
-      break;
+      return players1();
 
       case 2:
         function players2() {
           let player1 = document.getElementById("Player1","Player2").value;
           let player2 = document.getElementById("Player2").value;
-        
-          console.log(player1, player2);
+
+          return [player1, player2]     
         }
       players2();
-       break;
-
+      return players2();
+ 
        case 3:
         function players3() {
           let player1 = document.getElementById("Player1").value;
           let player2 = document.getElementById("Player2").value;
           let player3 = document.getElementById("Player3").value;
           
-          console.log(player1, player2, player3);
+          return [player1, player2, player3]
         }
-      players3();
-        break;
+      return players3();
    
       case 4:
         function players4() {
@@ -77,11 +75,9 @@ function forNumberPlayers()
           let player2 = document.getElementById("Player2").value;
           let player3 = document.getElementById("Player3").value;
           let player4 = document.getElementById("Player4").value;
-        
-          console.log(player1, player2, player3, player4);
+          return [player1, player2, player3, player4]
         }
-      players4();
-      break;
+      return players4();
 
       case 5:
         function players5() {
@@ -91,10 +87,9 @@ function forNumberPlayers()
           let player4 = document.getElementById("Player4").value;
           let player5 = document.getElementById("Player5").value;
         
-          console.log(player1, player2, player3, player4, player5);
+          return [player1, player2, player3, player4, player5]
         }
-      players5();
-      break;
+      return players5();
         
       case 6:
         function players6() {
@@ -105,10 +100,9 @@ function forNumberPlayers()
           let player5 = document.getElementById("Player5").value;
           let player6 = document.getElementById("Player6").value;
         
-          console.log(player1, player2, player3, player4, player5, player6);
+          return [player1, player2, player3, player4, player5, player6]
         }
-      players6();
-      break;
+      return players6();
 
       case 7:
         function players7() {
@@ -120,10 +114,9 @@ function forNumberPlayers()
           let player6 = document.getElementById("Player6").value;
           let player7 = document.getElementById("Player7").value;
                         
-          console.log(player1, player2, player3, player4, player5, player6, player7);
+          return [player1, player2, player3, player4, player5, player6, player7]
         }
-      players7();
-      break;
+      return players7();
 
       case 8:
         function players8() {
@@ -136,11 +129,9 @@ function forNumberPlayers()
           let player7 = document.getElementById("Player7").value;
           let player8 = document.getElementById("Player8").value;
         
-          console.log(player1, player2, player3, player4, player5, player6, player7, player8);
-        }
-        
-      players8();
-      break;
+          return [player1, player2, player3, player4, player5, player6, player7, player8]
+        }        
+      return players8();
   
     default:
 
@@ -150,5 +141,5 @@ function forNumberPlayers()
 
 function fplayers() {
   forNumberPlayers()
+  console.log(forNumberPlayers())
 }
-
