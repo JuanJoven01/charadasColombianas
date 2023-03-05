@@ -141,5 +141,3 @@ function fplayers() {
   forNumberPlayers()
   console.log(forNumberPlayers())
 }
-
-export {forNumberPlayers};
