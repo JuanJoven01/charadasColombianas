@@ -1,4 +1,3 @@
-
 // Get element
 let wordSelect = document.getElementById("modificable");
 let getCountCorrect = document.getElementById("corr");
@@ -102,13 +101,13 @@ function launcher()
   // Contador de eventos correctos e incorrectos
   function fcountCorrect() 
   {
-    sumaContador = countCorrect++;  
+    let sumaContador = countCorrect++;  
     getCountCorrect.innerHTML = 'Correctas: ' +(sumaContador + 1) ;
   }
   
   function fcountIncorrect() 
   {
-    restaContador = countIncorrect++;  
+    let restaContador = countIncorrect++;  
     getCountIncorrect.innerHTML = 'Incorrectas: ' + (restaContador + 1) ;
   }
   
