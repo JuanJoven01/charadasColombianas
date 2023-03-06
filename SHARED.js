@@ -15,8 +15,7 @@ function addInput() {
   
       numberPlayer++;
       addInput();
-      console.log(numberPlayer)
-      console.log(forNumberPlayers())
+      console.log(objectAll())
     }
     } 
    
@@ -121,9 +120,16 @@ function addInput() {
         break;
   }
   }
+function objectAll() {
+  const arrayNames = 
+   [forNumberPlayers()]
+   return arrayNames
+}
 
   export {numberOfPlayer};
   export {forNumberPlayers};
+  export {objectAll}
  
+
 
   

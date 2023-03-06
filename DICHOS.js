@@ -1,7 +1,12 @@
+import { objectAll } from "/SHARED.js";
+console.log(objectAll)
+
+
 // Get element
 let wordSelect = document.getElementById("modificable");
 let getCountCorrect = document.getElementById("corr");
-let getCountIncorrect = document.getElementById("inco");
+let getCountIncorrect = 
+document.getElementById("inco");
 let getCountResult = document.getElementById("resultado");
 let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')

@@ -18,8 +18,8 @@ function fmainMenu()
   location.href = '/MAINMENU.html'
 }
 
-numberOfPlayer();
-
 function fplayers() {
   forNumberPlayers()
 }
+
+numberOfPlayer();
