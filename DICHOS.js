@@ -12,7 +12,7 @@ let countCorrect = 0;
 let countIncorrect = 0;
 let countResult;
 let seconds = 5;
-let playTime = 5;
+let playTime = 60;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
@@ -100,16 +100,18 @@ function launcher()
   writeIncorrect.addEventListener("click", fcountResult);
   
   // Contador de eventos correctos e incorrectos
-function fcountCorrect() 
+  function fcountCorrect() 
   {
     sumaContador = countCorrect++;  
     getCountCorrect.innerHTML = 'Correctas: ' +(sumaContador + 1) ;
+    return sumaContador
   }
   
   function fcountIncorrect() 
   {
     restaContador = countIncorrect++;  
     getCountIncorrect.innerHTML = 'Incorrectas: ' + (restaContador + 1) ;
+    return restaContador
   }
   
   function fcountResult()
@@ -122,6 +124,7 @@ function fcountCorrect()
       countResult = 0
     }
     getCountResult.innerHTML = 'Puntos ronda: ' + countResult;
+    return countResult
   }
 }
 
@@ -156,5 +159,7 @@ const waitResultados = () =>
 
 }
 waitexcecute();
+
+
 
 
