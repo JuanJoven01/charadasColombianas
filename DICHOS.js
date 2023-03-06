@@ -19,7 +19,7 @@ let writeIncorrect = document.getElementById("incorrecto");
 
 // Event listener launch
 
-launch.addEventListener("click", TimerCount);
+launch.addEventListener("click", (TimerCount));
 
 // Constantes para tipo de charada
 const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
@@ -104,14 +104,12 @@ function launcher()
   {
     sumaContador = countCorrect++;  
     getCountCorrect.innerHTML = 'Correctas: ' +(sumaContador + 1) ;
-    return sumaContador
   }
   
   function fcountIncorrect() 
   {
     restaContador = countIncorrect++;  
     getCountIncorrect.innerHTML = 'Incorrectas: ' + (restaContador + 1) ;
-    return restaContador
   }
   
   function fcountResult()
@@ -124,7 +122,6 @@ function launcher()
       countResult = 0
     }
     getCountResult.innerHTML = 'Puntos ronda: ' + countResult;
-    return countResult
   }
 }
 
@@ -159,7 +156,6 @@ const waitResultados = () =>
 
 }
 waitexcecute();
-
 
 
 
