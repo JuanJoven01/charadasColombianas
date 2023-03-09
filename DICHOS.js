@@ -10,14 +10,14 @@ let getTimeCount = document.getElementById('tiempojuego')
 // Variables
 let countCorrect = 1;
 let countIncorrect = 1;
-let seconds = 2;
-let playTime = 60;
+let seconds = 3;
+let playTime = 3;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
-console.log(arrayNames)
+const scoreResult = 1;
 
 // Event listener launch
 
@@ -110,8 +110,7 @@ function fcountResult()
 
   // function launcher
 function launcher()
-{
-  writeCorrect.addEventListener("click", nextDicho);
+{  writeCorrect.addEventListener("click", nextDicho);
   writeCorrect.addEventListener("click", fhtmlCorrect);
   writeCorrect.addEventListener("click", fhtmlResult);
   
@@ -122,6 +121,8 @@ function launcher()
   function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
   function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
   function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
+  nextDicho();  
+  playcount();
 }
 
 // Funcion waitexcecute
@@ -133,15 +134,13 @@ const waitexcecute = () =>
   }
   else
   {  
-  playcount();
-  launcher()
-  nextDicho();  
+  launcher();
   waitResultados();
   }
 
 }
 
-// Funcion waitexcecute
+// Funcion waitResultados
 const waitResultados = () => 
 {
   if (playTime > 0) {
@@ -150,7 +149,7 @@ const waitResultados = () =>
   }
   else
   {  
-    fresultados();
+    console.log('siguiente')
   }
 }
 waitexcecute();
@@ -160,4 +159,40 @@ waitexcecute();
 function fresultados() 
 {
   location.href = "/RESULTADOS.html"
+}
+
+for (let i = 0; i < arrayNames.length; i++) {
+  console.log(i)
+}
+
+switch (arrayNames.length) {
+  case 8:
+    console.log('asddsg')
+    break;
+
+  case 7:
+    console.log('asdhfkjfhgd')
+    break;
+
+  case 6:
+    console.log('asdsdhadf')
+    break;
+
+  case 5:
+    console.log('alhjllghjsd')
+    break;
+
+  case 4:
+    console.log('asewteweytertd')
+    break;
+
+  case 3:
+    console.log('asdfxghgmcjd')
+    break;
+
+  case 2:
+    console.log('aszcxv bx dhd')
+    break;
+  default:
+    break;
 }
