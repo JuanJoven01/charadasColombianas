@@ -5,7 +5,7 @@ let dichos = document.getElementById("mainmenu");
 dichos.addEventListener("click", (fplayers, fmainMenu));
 
 let jugador1 = document.getElementById('Player1')
-jugador1.value = 'jugador 1'
+jugador1.value = 'Jugador 1'
 
 let jugadoresButton = document.getElementById('addInputButton');
 jugadoresButton.addEventListener('click', numberOfPlayer)

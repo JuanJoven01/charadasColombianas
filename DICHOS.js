@@ -139,7 +139,7 @@ const waitexcecute = () =>
   launcher();
   nextDicho();  
   waitResultados();
-  console.log(localStorage.getItem('localNames')) 
+
   }
 
 }
@@ -159,5 +159,8 @@ const waitResultados = () =>
 }
 waitexcecute();
 
+const localNames = localStorage.getItem('localNames')
 
+const arrayNames = localNames.split(',')
 
+console.log(arrayNames)
