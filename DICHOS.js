@@ -78,14 +78,12 @@ function nextDicho(event)
 {
   if (event = true)
   {
-    seleccionarDichos(arrayDichos)
     let words = seleccionarDichos(arrayDichos)
     wordSelect.innerHTML = words
   }    
 }
 
 // Contador de eventos correctos e incorrectos
-  
 function fcountCorrect() 
 {
   let sumaContador = countCorrect++; 
@@ -114,23 +112,23 @@ function fcountResult()
 function launcher()
 {
   writeCorrect.addEventListener("click", nextDicho);
-  writeCorrect.addEventListener("click", fconsoleCorrect);
-  writeCorrect.addEventListener("click", fconsoleResult);
+  writeCorrect.addEventListener("click", fhtmlCorrect);
+  writeCorrect.addEventListener("click", fhtmlResult);
   
   writeIncorrect.addEventListener("click", nextDicho);
-  writeIncorrect.addEventListener("click", fconsoleIncorrects);
-  writeIncorrect.addEventListener("click", fconsoleResult);
+  writeIncorrect.addEventListener("click", fhtmlIncorrects);
+  writeIncorrect.addEventListener("click", fhtmlResult);
 
-  function fconsoleCorrect () {console.log('sum ' + fcountCorrect())};
-  function fconsoleIncorrects () {console.log('rest ' + fcountIncorrect())};
-  function fconsoleResult () {console.log('result ' + fcountResult())};
+  function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
+  function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
+  function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
 }
 
 // Funcion waitexcecute
 const waitexcecute = () => 
 {
   if (seconds > 0) {
-    setTimeout(waitexcecute, 1000); // espera 1 segundo y vuelve a comprobar
+    setTimeout(waitexcecute, 1000); 
     return;
   }
   else
@@ -147,7 +145,7 @@ const waitexcecute = () =>
 const waitResultados = () => 
 {
   if (playTime > 0) {
-    setTimeout(waitResultados, 1000); // espera 1 segundo y vuelve a comprobar
+    setTimeout(waitResultados, 1000); 
     return;
   }
   else
