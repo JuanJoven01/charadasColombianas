@@ -2,21 +2,22 @@
 // Get element
 let wordSelect = document.getElementById("modificable");
 let getCountCorrect = document.getElementById("corr");
-let getCountIncorrect = 
-document.getElementById("inco");
+let getCountIncorrect = document.getElementById("inco");
 let getCountResult = document.getElementById("resultado");
 let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')
 
 // Variables
-let countCorrect = 0;
-let countIncorrect = 0;
-let countResult;
-let seconds = 5;
+let countCorrect = 1;
+let countIncorrect = 1;
+let seconds = 2;
 let playTime = 60;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
+const localNames = localStorage.getItem('localNames')
+const arrayNames = localNames.split(',')
+console.log(arrayNames)
 
 // Event listener launch
 
@@ -65,12 +66,6 @@ function playcount()
   );
 }
 
-// Funciones para redirigir
-function fresultados() 
-{
-  location.href = "/RESULTADOS.html"
-}
-
 // Funciones para el arrey 
 function seleccionarDichos(array) 
 {
@@ -89,41 +84,46 @@ function nextDicho(event)
   }    
 }
 
+// Contador de eventos correctos e incorrectos
+  
+function fcountCorrect() 
+{
+  let sumaContador = countCorrect++; 
+  return sumaContador 
+}
+
+function fcountIncorrect() 
+{
+  let restaContador = countIncorrect++;  
+  return restaContador
+}
+  
+function fcountResult()
+{
+  let more = countCorrect;
+  let less = countIncorrect;
+  let countResult = more - less
+  if (countResult < 0)
+  {
+    countResult = 0
+  }
+  return countResult
+}
+
   // function launcher
 function launcher()
 {
-  writeCorrect.addEventListener("click", (nextDicho));
-  writeCorrect.addEventListener("click", fcountCorrect);
-  writeCorrect.addEventListener("click", fcountResult);
+  writeCorrect.addEventListener("click", nextDicho);
+  writeCorrect.addEventListener("click", fconsoleCorrect);
+  writeCorrect.addEventListener("click", fconsoleResult);
   
   writeIncorrect.addEventListener("click", nextDicho);
-  writeIncorrect.addEventListener("click", fcountIncorrect);
-  writeIncorrect.addEventListener("click", fcountResult);
-  
-  // Contador de eventos correctos e incorrectos
-  function fcountCorrect() 
-  {
-    let sumaContador = countCorrect++;  
-    getCountCorrect.innerHTML = 'Correctas: ' +(sumaContador + 1) ;
-  }
-  
-  function fcountIncorrect() 
-  {
-    let restaContador = countIncorrect++;  
-    getCountIncorrect.innerHTML = 'Incorrectas: ' + (restaContador + 1) ;
-  }
-  
-  function fcountResult()
-  {
-    let more = countCorrect;
-    let less = countIncorrect;
-    let countResult = more - less
-    if (countResult < 0)
-    {
-      countResult = 0
-    }
-    getCountResult.innerHTML = 'Puntos ronda: ' + countResult;
-  }
+  writeIncorrect.addEventListener("click", fconsoleIncorrects);
+  writeIncorrect.addEventListener("click", fconsoleResult);
+
+  function fconsoleCorrect () {console.log('sum ' + fcountCorrect())};
+  function fconsoleIncorrects () {console.log('rest ' + fcountIncorrect())};
+  function fconsoleResult () {console.log('result ' + fcountResult())};
 }
 
 // Funcion waitexcecute
@@ -136,10 +136,9 @@ const waitexcecute = () =>
   else
   {  
   playcount();
-  launcher();
+  launcher()
   nextDicho();  
   waitResultados();
-
   }
 
 }
@@ -155,12 +154,12 @@ const waitResultados = () =>
   {  
     fresultados();
   }
-
 }
 waitexcecute();
 
-const localNames = localStorage.getItem('localNames')
+// Funciones para redirigir
 
-const arrayNames = localNames.split(',')
-
-console.log(arrayNames)
+function fresultados() 
+{
+  location.href = "/RESULTADOS.html"
+}
