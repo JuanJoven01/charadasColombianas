@@ -15,11 +15,14 @@ jugadoresButton.addEventListener('click', numberOfPlayer)
 
 function fmainMenu() 
 {
+  localStorage.setItem('localNames',forNumberPlayers())
   location.href = '/MAINMENU.html'
 }
 
+
 function fplayers() {
   forNumberPlayers()
+
 }
 
 numberOfPlayer();

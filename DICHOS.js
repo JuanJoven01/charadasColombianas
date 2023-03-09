@@ -1,6 +1,3 @@
-import { objectAll } from "/SHARED.js";
-console.log(objectAll)
-
 
 // Get element
 let wordSelect = document.getElementById("modificable");
@@ -89,7 +86,7 @@ function nextDicho(event)
     seleccionarDichos(arrayDichos)
     let words = seleccionarDichos(arrayDichos)
     wordSelect.innerHTML = words
-  }     
+  }    
 }
 
   // function launcher
@@ -142,6 +139,7 @@ const waitexcecute = () =>
   launcher();
   nextDicho();  
   waitResultados();
+  console.log(localStorage.getItem('localNames')) 
   }
 
 }
