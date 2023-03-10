@@ -8,20 +8,17 @@ let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')
 
 // Variables
-let countCorrect = 1;
-let countIncorrect = 1;
-let seconds = 3;
-let playTime = 3;
 let launch = document.getElementById("modificable");
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
-const scoreResult = 1;
-
-// Event listener launch
-
-launch.addEventListener("click", (TimerCount));
+let arrayLength = arrayNames.length
+let scoreResult = 1;
+let countCorrect = 1;
+let countIncorrect = 1;
+let seconds = 3;
+let playTime = 3;
 
 // Constantes para tipo de charada
 const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
@@ -29,51 +26,35 @@ const arrayEstereotipos = ['rolo', 'caleno', 'cucuteno', 'paisa'];
 const arrayFarandula = ['maluma', 'shakira', 'diomedes', 'juanes'];
 const arrayInfancia = ['ArtAttack', 'MandySenorbigotes', 'dalmatas', 'princesasapo'];
 
-// funcion de contador
-function TimerCount()
-{
-  let temporizador = setInterval
-  (
-    function timer() 
-    {
-    seconds--;
-    getCountTime.innerHTML = 'Tiempo para inciar: ' + seconds;
-    if (seconds == 0) 
-    {
-    clearInterval(temporizador);
-    }
-    if (seconds < 0) 
-    {
-      seconds = 1;
-    }
-    }, 1000
-  );
+function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
+function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
+function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
+
+// Function total
+function total() {
+    seconds = 3;
+    playTime = 3; 
+    scoreResult = 1;
+    countCorrect = 1;
+    countIncorrect = 1;
+    waitexcecute();
 }
 
-function playcount()
-{
-  let temporizador = setInterval
-  (
-    function timer() 
-    {
-    playTime--;
-    getTimeCount.innerHTML = 'Tiempo de ronda: ' + playTime;
-      if (playTime == 0) 
-      {
-      clearInterval(temporizador);
-      }
-    }, 1000
-  );
-}
+  // function launcher
+  function launcher()
+  { 
+      writeCorrect.addEventListener("click", nextDicho);
+      writeCorrect.addEventListener("click", fhtmlCorrect);
+      writeCorrect.addEventListener("click", fhtmlResult);
+      
+      writeIncorrect.addEventListener("click", nextDicho);
+      writeIncorrect.addEventListener("click", fhtmlIncorrects);
+      writeIncorrect.addEventListener("click", fhtmlResult);  
+      nextDicho();  
+      return nextDicho();
+  }
 
-// Funciones para el arrey 
-function seleccionarDichos(array) 
-{
-  const azarIndex = Math.floor(Math.random() * array.length);
-  return array[azarIndex];   
-}
-
-// Funciones para event
+  // Funciones para event
 function nextDicho(event) 
 {
   if (event = true)
@@ -108,21 +89,11 @@ function fcountResult()
   return countResult
 }
 
-  // function launcher
-function launcher()
-{  writeCorrect.addEventListener("click", nextDicho);
-  writeCorrect.addEventListener("click", fhtmlCorrect);
-  writeCorrect.addEventListener("click", fhtmlResult);
-  
-  writeIncorrect.addEventListener("click", nextDicho);
-  writeIncorrect.addEventListener("click", fhtmlIncorrects);
-  writeIncorrect.addEventListener("click", fhtmlResult);
-
-  function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
-  function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
-  function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
-  nextDicho();  
-  playcount();
+// Funciones para el arrey 
+function seleccionarDichos(array) 
+{
+  const azarIndex = Math.floor(Math.random() * array.length);
+  return array[azarIndex];   
 }
 
 // Funcion waitexcecute
@@ -140,20 +111,67 @@ const waitexcecute = () =>
 
 }
 
+// Event listener launch
+launch.addEventListener("click", (TimerCount));
+
+// funcion de contador
+function TimerCount()
+{
+  let temporizador = setInterval
+  (
+    function timer() 
+    {
+    seconds--;
+    getCountTime.innerHTML = 'Tiempo para inciar: ' + seconds;
+    if (seconds == 0) 
+    {
+    playcount();
+    clearInterval(temporizador);
+    }
+    if (seconds < 0) 
+    {
+      seconds = 1;
+    }
+    }, 1000
+  );
+}
+
+function playcount()
+{
+  let temporizador = setInterval
+  (
+    function timer() 
+    {
+    playTime--;
+    getTimeCount.innerHTML = 'Tiempo de ronda: ' + playTime;
+      if (playTime == 0) 
+      {
+      clearInterval(temporizador);
+      }
+    }, 1000
+  );
+}
+
 // Funcion waitResultados
 const waitResultados = () => 
 {
-  if (playTime > 0) {
-    setTimeout(waitResultados, 1000); 
-    return;
-  }
-  else
-  {  
-    console.log('siguiente')
-  }
+    if (playTime > 0) {
+      setTimeout(waitResultados, 1000); 
+      return;
+    }
+    else
+    { 
+      console.log('siguiente');
+      console.log(seconds);
+      TimerCount();
+      total();
+    }     
+  return
 }
-waitexcecute();
 
+total()
+
+console.log(arrayLength)
 // Funciones para redirigir
 
 function fresultados() 
@@ -161,10 +179,7 @@ function fresultados()
   location.href = "/RESULTADOS.html"
 }
 
-for (let i = 0; i < arrayNames.length; i++) {
-  console.log(i)
-}
-
+/*
 switch (arrayNames.length) {
   case 8:
     console.log('asddsg')
@@ -195,4 +210,4 @@ switch (arrayNames.length) {
     break;
   default:
     break;
-}
+}*/
