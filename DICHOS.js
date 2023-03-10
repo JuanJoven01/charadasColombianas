@@ -8,17 +8,19 @@ let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')
 
 // Variables
-let launch = document.getElementById("modificable");
+let booleanLaunch = true;
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
-let arrayLength = arrayNames.length
-let scoreResult = 1;
-let countCorrect = 1;
-let countIncorrect = 1;
-let seconds = 3;
-let playTime = 3;
+let scoreResult = 0;
+let countCorrect = 0;
+let countIncorrect = 0;
+let seconds = 1;
+let playTime = 2;
+let i = 0;
+let resultPlayers = []
+console.log(arrayNames)
 
 // Constantes para tipo de charada
 const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
@@ -32,15 +34,18 @@ function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountRes
 
 // Function total
 function total() {
-    seconds = 3;
-    playTime = 3; 
-    scoreResult = 1;
-    countCorrect = 1;
-    countIncorrect = 1;
+    seconds = 1;
+    playTime = 1; 
+    scoreResult = 0;
+    countCorrect = 0;
+    countIncorrect = 0;
+    fhtmlCorrect();
+    fhtmlIncorrects();
+    fhtmlResult();
     waitexcecute();
 }
 
-  // function launcher
+// function launcher
   function launcher()
   { 
       writeCorrect.addEventListener("click", nextDicho);
@@ -51,10 +56,9 @@ function total() {
       writeIncorrect.addEventListener("click", fhtmlIncorrects);
       writeIncorrect.addEventListener("click", fhtmlResult);  
       nextDicho();  
-      return nextDicho();
   }
 
-  // Funciones para event
+// Funciones para event
 function nextDicho(event) 
 {
   if (event = true)
@@ -111,9 +115,6 @@ const waitexcecute = () =>
 
 }
 
-// Event listener launch
-launch.addEventListener("click", (TimerCount));
-
 // funcion de contador
 function TimerCount()
 {
@@ -153,25 +154,30 @@ function playcount()
 }
 
 // Funcion waitResultados
+
 const waitResultados = () => 
 {
+
     if (playTime > 0) {
       setTimeout(waitResultados, 1000); 
       return;
     }
-    else
-    { 
-      console.log('siguiente');
-      console.log(seconds);
+    if (i < arrayNames.length) { 
+      resultPlayers.push(fcountResult())
+      i++;
       TimerCount();
       total();
-    }     
-  return
+      localStorage.setItem('resultAll',resultPlayers)
+
+    }   
+    else{
+      fresultados();
+    }   
 }
 
-total()
+TimerCount();
+total(); 
 
-console.log(arrayLength)
 // Funciones para redirigir
 
 function fresultados() 
@@ -179,35 +185,3 @@ function fresultados()
   location.href = "/RESULTADOS.html"
 }
 
-/*
-switch (arrayNames.length) {
-  case 8:
-    console.log('asddsg')
-    break;
-
-  case 7:
-    console.log('asdhfkjfhgd')
-    break;
-
-  case 6:
-    console.log('asdsdhadf')
-    break;
-
-  case 5:
-    console.log('alhjllghjsd')
-    break;
-
-  case 4:
-    console.log('asewteweytertd')
-    break;
-
-  case 3:
-    console.log('asdfxghgmcjd')
-    break;
-
-  case 2:
-    console.log('aszcxv bx dhd')
-    break;
-  default:
-    break;
-}*/
