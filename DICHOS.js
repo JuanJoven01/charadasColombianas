@@ -6,17 +6,18 @@ let getCountIncorrect = document.getElementById("inco");
 let getCountResult = document.getElementById("resultado");
 let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')
-
-// Variables
+let getTittle = document.getElementById('tittle')
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
+
+// Variables
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
 let scoreResult = 0;
 let countCorrect = 0;
 let countIncorrect = 0;
 let seconds = 5;
-let playTime = 60;
+let playTime = 5;
 let i = 0;
 let resultPlayers = []
 let booleanLaunch = true
@@ -31,6 +32,7 @@ const arrayInfancia = ['ArtAttack', 'MandySenorbigotes', 'dalmatas', 'princesasa
 function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
 function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
+function fhtmlPlayer () {getTittle.innerHTML = playerCurrect()}
 
 // boolean
 function booleanLauncher() {
@@ -44,16 +46,24 @@ function booleanLauncher() {
   }
 }
 
+// Function Player
+function playerCurrect () {
+  let currentNames = arrayNames[i]
+  console.log(currentNames)
+  return currentNames
+}
+
 // Function total
 function total() {
     seconds = 5;
-    playTime = 10; 
+    playTime = 5; 
     scoreResult = 0;
     countCorrect = 0;
     countIncorrect = 0;
     fhtmlCorrect();
     fhtmlIncorrects();
     fhtmlResult();
+    fhtmlPlayer();
     waitexcecute(); 
     if ( resultPlayers.length == arrayNames.length) {
       fresultados();
@@ -85,7 +95,7 @@ function launcher()
     writeIncorrect.removeEventListener("click", fhtmlIncorrects);
     writeIncorrect.removeEventListener("click", fhtmlResult);   
    }
-  },200
+  }, 1000
   )
   return bool;
 }
