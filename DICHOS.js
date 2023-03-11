@@ -8,7 +8,6 @@ let getCountTime = document.getElementById("temporizador");
 let getTimeCount = document.getElementById('tiempojuego')
 
 // Variables
-let booleanLaunch = true;
 let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 const localNames = localStorage.getItem('localNames')
@@ -20,6 +19,7 @@ let seconds = 5;
 let playTime = 5;
 let i = 0;
 let resultPlayers = []
+let booleanLaunch = true
 console.log(arrayNames)
 
 // Constantes para tipo de charada
@@ -32,6 +32,17 @@ function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorr
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
 function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
 
+function booleanLauncher() {
+  if (seconds == 0) {
+    booleanLaunch = true
+    return booleanLaunch
+  }
+  else {
+    booleanLaunch = false
+    return booleanLaunch
+  }
+}
+
 // Function total
 function total() {
     seconds = 5;
@@ -42,27 +53,36 @@ function total() {
     fhtmlCorrect();
     fhtmlIncorrects();
     fhtmlResult();
-    waitexcecute();
+    waitexcecute(); 
     if ( resultPlayers.length == arrayNames.length) {
       fresultados();
-    }
+    } 
 }
 
 // function launcher
-  function launcher()
-  { 
+function launcher()
+{ 
+  let bool = setInterval (
+    function timer() { 
+      let booooo = booleanLauncher()
+      console.log(booooo)
+    if (booooo == true) {  
       writeCorrect.addEventListener("click", nextDicho);
       writeCorrect.addEventListener("click", fhtmlCorrect);
       writeCorrect.addEventListener("click", fhtmlResult);
       
       writeIncorrect.addEventListener("click", nextDicho);
       writeIncorrect.addEventListener("click", fhtmlIncorrects);
-      writeIncorrect.addEventListener("click", fhtmlResult);  
-      nextDicho();  
-  }
+      writeIncorrect.addEventListener("click", fhtmlResult);   
+      return  
+   } 
+  },1000
+  )
+  return bool;
+}
 
 // Funciones para event
-function nextDicho(event) 
+function nextDicho() 
 {
   if (event = true)
   {
@@ -111,16 +131,16 @@ const waitexcecute = () =>
     return;
   }
   else
-  {  
-  launcher();
-  waitResultados();
+  { 
+    nextDicho(); 
+    waitResultados();
   }
-
 }
 
 // funcion de contador
 function TimerCount()
 {
+  
   let temporizador = setInterval
   (
     function timer() 
@@ -168,14 +188,14 @@ const waitResultados = () =>
     else if (i < arrayNames.length) { 
       resultPlayers.push(fcountResult());
       i++;
-      console.log(resultPlayers.length)
-      TimerCount();
       total();
+      TimerCount();
       localStorage.setItem('resultAll',resultPlayers)
     }   
 }
 
 total();
+launcher();
 TimerCount();
 
 // Funciones para redirigir

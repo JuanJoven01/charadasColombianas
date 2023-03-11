@@ -22,7 +22,6 @@ function fmainMenu()
 
 function fplayers() {
   forNumberPlayers()
-
 }
 
 numberOfPlayer();
