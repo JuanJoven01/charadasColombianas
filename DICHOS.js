@@ -16,8 +16,8 @@ const arrayNames = localNames.split(',')
 let scoreResult = 0;
 let countCorrect = 0;
 let countIncorrect = 0;
-let seconds = 1;
-let playTime = 2;
+let seconds = 5;
+let playTime = 5;
 let i = 0;
 let resultPlayers = []
 console.log(arrayNames)
@@ -34,8 +34,8 @@ function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountRes
 
 // Function total
 function total() {
-    seconds = 1;
-    playTime = 1; 
+    seconds = 5;
+    playTime = 5; 
     scoreResult = 0;
     countCorrect = 0;
     countIncorrect = 0;
@@ -43,6 +43,9 @@ function total() {
     fhtmlIncorrects();
     fhtmlResult();
     waitexcecute();
+    if ( resultPlayers.length == arrayNames.length) {
+      fresultados();
+    }
 }
 
 // function launcher
@@ -162,21 +165,18 @@ const waitResultados = () =>
       setTimeout(waitResultados, 1000); 
       return;
     }
-    if (i < arrayNames.length) { 
-      resultPlayers.push(fcountResult())
+    else if (i < arrayNames.length) { 
+      resultPlayers.push(fcountResult());
       i++;
+      console.log(resultPlayers.length)
       TimerCount();
       total();
       localStorage.setItem('resultAll',resultPlayers)
-
-    }   
-    else{
-      fresultados();
     }   
 }
 
+total();
 TimerCount();
-total(); 
 
 // Funciones para redirigir
 

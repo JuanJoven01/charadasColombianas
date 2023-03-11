@@ -1,3 +1,15 @@
+
+let inicio = document.getElementById('mainmenu');
+let ppp = document.getElementById('ppp');
+let rrr = document.getElementById('rrr')
+
+inicio.addEventListener('click', fmainMenu)
+
+function fmainMenu() 
+{
+  location.href = '/JUGADORES.html'
+}
+
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
 console.log(arrayNames)
@@ -10,5 +22,8 @@ const resultForNames = {
     names: arrayNames,
     results: arrayResult
 }
+
+ppp.innerHTML = arrayNames;
+rrr.innerHTML = arrayResult
 
 console.log(resultForNames)
