@@ -11,8 +11,10 @@ let writeCorrect = document.getElementById("correcto");
 let writeIncorrect = document.getElementById("incorrecto");
 
 // Variables
+const wordSelected = localStorage.getItem('wordsGame')
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
+const arrayWords = wordSelected.split(',')
 let scoreResult = 0;
 let countCorrect = 0;
 let countIncorrect = 0;
@@ -22,12 +24,6 @@ let i = 0;
 let resultPlayers = []
 let booleanLaunch = true
 console.log(arrayNames)
-
-// Constantes para tipo de charada
-const arrayDichos = ['sapo', 'gonorrea', 'hp', 'marica'];
-const arrayEstereotipos = ['rolo', 'caleno', 'cucuteno', 'paisa'];
-const arrayFarandula = ['maluma', 'shakira', 'diomedes', 'juanes'];
-const arrayInfancia = ['ArtAttack', 'MandySenorbigotes', 'dalmatas', 'princesasapo'];
 
 function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
@@ -105,7 +101,7 @@ function nextDicho()
 {
   if (event = true)
   {
-    let words = seleccionarDichos(arrayDichos)
+    let words = seleccionarDichos(arrayWords)
     wordSelect.innerHTML = words
   }    
 }
