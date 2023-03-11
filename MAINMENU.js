@@ -17,7 +17,7 @@ function fdichos(event)
 {
   location.href = "/DICHOS.HTML"
   function wordSelect() {
-    const arrayWords = ['sapo', 'gonorrea', 'hp', 'marica'];
+    const arrayWords = ['sapo, gonorrea, hp, marica'];
     return arrayWords
   }
   localStorage.setItem('wordsGame', wordSelect())
@@ -28,7 +28,7 @@ function festereotipos(event)
   location.href = "/DICHOS.HTML"
 
   function wordSelect() {
-    const arrayWords = ['rolo', 'caleno', 'cucuteno', 'paisa'];
+    const arrayWords = ['rolo, caleno, cucuteno, paisa'];
     return arrayWords
   }
   localStorage.setItem('wordsGame', wordSelect())
@@ -39,7 +39,7 @@ function ffarandula(event)
   location.href = "/DICHOS.HTML"
   
   function wordSelect() {
-    const arrayWords = ['maluma', 'shakira', 'diomedes', 'juanes'];
+    const arrayWords = ['maluma, shakira, diomedes, juanes'];
     return arrayWords
   }
   localStorage.setItem('wordsGame', wordSelect())
@@ -50,7 +50,7 @@ function finfancia(event)
   location.href = "/DICHOS.HTML"
   
   function wordSelect() {
-    const arrayWords = ['ArtAttack', 'MandySenorbigotes', 'dalmatas', 'princesasapo'];
+    const arrayWords = ['ArtAttack, MandySenorbigotes, dalmatas, princesasapo'];
     return arrayWords
   }
   localStorage.setItem('wordsGame', wordSelect())
