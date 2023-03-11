@@ -16,7 +16,7 @@ let scoreResult = 0;
 let countCorrect = 0;
 let countIncorrect = 0;
 let seconds = 5;
-let playTime = 5;
+let playTime = 60;
 let i = 0;
 let resultPlayers = []
 let booleanLaunch = true
@@ -32,6 +32,7 @@ function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorr
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
 function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
 
+// boolean
 function booleanLauncher() {
   if (seconds == 0) {
     booleanLaunch = true
@@ -46,7 +47,7 @@ function booleanLauncher() {
 // Function total
 function total() {
     seconds = 5;
-    playTime = 5; 
+    playTime = 10; 
     scoreResult = 0;
     countCorrect = 0;
     countIncorrect = 0;
@@ -74,9 +75,17 @@ function launcher()
       writeIncorrect.addEventListener("click", nextDicho);
       writeIncorrect.addEventListener("click", fhtmlIncorrects);
       writeIncorrect.addEventListener("click", fhtmlResult);   
-      return  
    } 
-  },1000
+   else {
+    writeCorrect.removeEventListener("click", nextDicho);
+    writeCorrect.removeEventListener("click", fhtmlCorrect);
+    writeCorrect.removeEventListener("click", fhtmlResult);
+    
+    writeIncorrect.removeEventListener("click", nextDicho);
+    writeIncorrect.removeEventListener("click", fhtmlIncorrects);
+    writeIncorrect.removeEventListener("click", fhtmlResult);   
+   }
+  },200
   )
   return bool;
 }
