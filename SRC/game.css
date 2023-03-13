@@ -79,11 +79,14 @@ body div
 
 .modify 
 {
+    justify-self: center;
+    align-self: center;
     align-items: center;
     text-align: center;
     display: flex;
     font-size: var(--bg);
     padding: 10px;
+    max-width: 600px;
     height: 100px;
     color: var(--red);
 }
