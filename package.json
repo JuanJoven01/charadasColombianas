@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sebastian Joven juanjov020113@gmail.com; Juan Pablo Joven juanjov95@hotmail.com",
+  "author": "Sebastian Joven juanjov020113@gmail.com & Juan Pablo Joven juanjov95@hotmail.com", 
+
   "license": "MIT"
 }
