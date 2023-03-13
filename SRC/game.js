@@ -71,7 +71,7 @@ function launcher()
     function timer() { 
       let booooo = booleanLauncher()
     if (booooo == true) {  
-      globalThis.addEventListener('deviceorientation', writeNext)
+      window.addEventListener('deviceorientation', writeNext)
 
       writeCorrect.addEventListener("click", nextDicho);
       writeCorrect.addEventListener("click", fhtmlCorrect);
@@ -82,7 +82,7 @@ function launcher()
       writeIncorrect.addEventListener("click", fhtmlResult);   
     } 
     else {
-    globalThis.removeEventListener('deviceorientation', writeNext)
+    window.removeEventListener('deviceorientation', writeNext)
 
     writeCorrect.removeEventListener("click", nextDicho);
     writeCorrect.removeEventListener("click", fhtmlCorrect);
