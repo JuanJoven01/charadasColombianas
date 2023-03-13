@@ -1,4 +1,3 @@
-
 // Get element
 let wordSelect = document.getElementById("modificable");
 let getCountCorrect = document.getElementById("corr");
@@ -24,12 +23,13 @@ let i = 0;
 let resultPlayers = []
 let booleanLaunch = true
 
+// Escribir en navegador
 function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
 function fhtmlResult () {getCountResult.innerHTML = 'Puntos ronda: ' + fcountResult()};
 function fhtmlPlayer () {getTittle.innerHTML = playerCurrect()}
 
-// boolean
+// Boolean
 function booleanLauncher() {
   if (seconds == 0) {
     booleanLaunch = true
@@ -189,7 +189,6 @@ function playcount()
 }
 
 // Funcion waitResultados
-
 const waitResultados = () => 
 {
 
@@ -206,14 +205,14 @@ const waitResultados = () =>
     }   
 }
 
+// Lanzadores
 total();
 launcher();
 TimerCount();
 
 // Funciones para redirigir
-
 function fresultados() 
 {
-  location.href = "/RESULTADOS.html"
+  location.href = "/SRC/result.html"
 }
 

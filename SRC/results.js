@@ -1,16 +1,8 @@
-
 let inicio = document.getElementById('mainmenu');
-
 inicio.addEventListener('click', fmainMenu)
-
-function fmainMenu() 
-{
-  location.href = '/JUGADORES.html'
-}
 
 const localNames = localStorage.getItem('localNames')
 const arrayNames = localNames.split(',')
-
 const resultAll = localStorage.getItem('resultAll');
 const arrayResult = resultAll.split(',')
 
@@ -25,4 +17,8 @@ for (let i = 0; i < arrayNames.length; i++) {
 }
 addInput();
 }
-
+// redirigir
+function fmainMenu() 
+{
+  location.href = '/SRC/main_menu.html'
+}

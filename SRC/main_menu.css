@@ -50,7 +50,7 @@ header h2 {
 }
 
 body {
-    background-image: url("./IMG/Background.png");
+    background-image: url("/IMG/Background.png");
     
 }
 main div { 

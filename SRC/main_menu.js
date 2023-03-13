@@ -15,7 +15,7 @@ infancia.addEventListener("click", finfancia);
 // Funciones para redirigir
 function fdichos(event) 
 {
-  location.href = "/DICHOS.HTML"
+  location.href = "/SRC/game.html"
   function wordSelect() {
     const arrayWords = ['sapo, gonorrea, hp, marica'];
     return arrayWords
@@ -25,7 +25,7 @@ function fdichos(event)
 
 function festereotipos(event) 
 {
-  location.href = "/DICHOS.HTML"
+  location.href = "/SRC/game.html"
 
   function wordSelect() {
     const arrayWords = ['rolo, caleno, cucuteno, paisa'];
@@ -36,7 +36,7 @@ function festereotipos(event)
 
 function ffarandula(event) 
 {
-  location.href = "/DICHOS.HTML"
+  location.href = "/SRC/game.html"
   
   function wordSelect() {
     const arrayWords = ['maluma, shakira, diomedes, juanes'];
@@ -47,7 +47,7 @@ function ffarandula(event)
 
 function finfancia(event) 
 {
-  location.href = "/DICHOS.HTML"
+  location.href = "/SRC/game.html"
   
   function wordSelect() {
     const arrayWords = ['ArtAttack, MandySenorbigotes, dalmatas, princesasapo'];

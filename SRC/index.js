@@ -5,5 +5,5 @@ dichos.addEventListener("click", fplayGame);
 // Funciones para redirigir
 function fplayGame(event) 
 {
-  location.href = "/JUGADORES.html";
+  location.href = "/SRC/players_name.html";
 }
