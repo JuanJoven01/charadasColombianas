@@ -20,5 +20,5 @@ addInput();
 // redirigir
 function fmainMenu() 
 {
-  location.href = '/SRC/main_menu.html'
+  location.href = '/SRC/index.html'
 }

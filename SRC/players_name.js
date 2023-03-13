@@ -34,17 +34,9 @@ function numberOfPlayer(event) {
 {
   switch (numberPlayer) {
 
-      case 1: 
-      function players1() {
-        let player1 = document.getElementById("Player1").value;
-    
-        return [player1];
-      }
-      return players1();
-
       case 2:
         function players2() {
-          let player1 = document.getElementById("Player1","Player2").value;
+          let player1 = document.getElementById("Player1").value;
           let player2 = document.getElementById("Player2").value;
 
           return [player1, player2]     

@@ -53,6 +53,7 @@ body {
     background-image: url("/IMG/Background.png");
     
 }
+
 main div { 
     display: grid;
     grid-template-columns: 1fr 1fr;
