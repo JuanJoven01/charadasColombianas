@@ -52,7 +52,7 @@ function playerCurrect () {
 // Function total
 function total() {
     seconds = 5;
-    playTime = 60; 
+    playTime = 5; 
     scoreResult = 0;
     countCorrect = 0;
     countIncorrect = 0;

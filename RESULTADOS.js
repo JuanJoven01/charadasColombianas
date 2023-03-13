@@ -1,7 +1,5 @@
 
 let inicio = document.getElementById('mainmenu');
-let ppp = document.getElementById('ppp');
-let rrr = document.getElementById('rrr')
 
 inicio.addEventListener('click', fmainMenu)
 
@@ -18,12 +16,15 @@ const resultAll = localStorage.getItem('resultAll');
 const arrayResult = resultAll.split(',')
 console.log(arrayResult)
 
-const resultForNames = {
-    names: arrayNames,
-    results: arrayResult
+for (let i = 0; i < arrayNames.length; i++) {
+  function addInput() {
+    let inputContainer = document.getElementById("namesresult");
+    let newOutput = document.createElement("output");
+    newOutput.type = "text";
+    newOutput.value = arrayNames[i] + '= ' + arrayResult[i];
+    newOutput.id = 'Player' ;
+    inputContainer.appendChild(newOutput);  
+}
+addInput();
 }
 
-ppp.innerHTML = arrayNames;
-rrr.innerHTML = arrayResult
-
-console.log(resultForNames)
