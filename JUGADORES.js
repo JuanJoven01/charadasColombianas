@@ -10,15 +10,12 @@ jugador1.value = 'Jugador 1'
 let jugadoresButton = document.getElementById('addInputButton');
 jugadoresButton.addEventListener('click', numberOfPlayer)
 
-
 // Funciones para redirigir
-
 function fmainMenu() 
 {
   localStorage.setItem('localNames',forNumberPlayers())
   location.href = '/MAINMENU.html'
 }
-
 
 function fplayers() {
   forNumberPlayers()

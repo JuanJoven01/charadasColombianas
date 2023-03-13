@@ -23,7 +23,6 @@ let playTime = 5;
 let i = 0;
 let resultPlayers = []
 let booleanLaunch = true
-console.log(arrayNames)
 
 function fhtmlCorrect () {getCountCorrect.innerHTML = 'Correctas: ' + fcountCorrect()};
 function fhtmlIncorrects () {getCountIncorrect.innerHTML = 'Incorretas: ' + fcountIncorrect()};
@@ -45,7 +44,6 @@ function booleanLauncher() {
 // Function Player
 function playerCurrect () {
   let currentNames = arrayNames[i]
-  console.log(currentNames)
   return currentNames
 }
 
@@ -72,7 +70,6 @@ function launcher()
   let bool = setInterval (
     function timer() { 
       let booooo = booleanLauncher()
-      console.log(booooo)
     if (booooo == true) {  
       writeCorrect.addEventListener("click", nextDicho);
       writeCorrect.addEventListener("click", fhtmlCorrect);
