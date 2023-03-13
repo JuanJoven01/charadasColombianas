@@ -71,6 +71,8 @@ function launcher()
     function timer() { 
       let booooo = booleanLauncher()
     if (booooo == true) {  
+      globalThis.addEventListener('deviceorientation', writeNext)
+
       writeCorrect.addEventListener("click", nextDicho);
       writeCorrect.addEventListener("click", fhtmlCorrect);
       writeCorrect.addEventListener("click", fhtmlResult);
@@ -78,8 +80,10 @@ function launcher()
       writeIncorrect.addEventListener("click", nextDicho);
       writeIncorrect.addEventListener("click", fhtmlIncorrects);
       writeIncorrect.addEventListener("click", fhtmlResult);   
-   } 
-   else {
+    } 
+    else {
+    globalThis.removeEventListener('deviceorientation', writeNext)
+
     writeCorrect.removeEventListener("click", nextDicho);
     writeCorrect.removeEventListener("click", fhtmlCorrect);
     writeCorrect.removeEventListener("click", fhtmlResult);
@@ -91,6 +95,22 @@ function launcher()
   }, 1000
   )
   return bool;
+}
+
+// Function orientacioón
+function writeNext(event) {
+  var inclination = event.gamma;
+
+  if (inclination < -20) {
+    nextDicho();
+    fhtmlIncorrects();
+    fhtmlResult();
+  }
+  else if (inclination > 20) {
+    nextDicho();
+    fhtmlCorrect();
+    fhtmlResult();
+  }
 }
 
 // Funciones para event
